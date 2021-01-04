@@ -1,0 +1,54 @@
+{
+  "name": "buglogger",
+  "productName": "BugLogger",
+  "version": "1.0.0",
+  "description": "App bug tracker for a team",
+  "author": "wolfian",
+  "license": "MIT",
+  "engines": {
+    "node": ">=9.0.0",
+    "npm": ">=5.0.0",
+    "yarn": ">=1.0.0"
+  },
+  "homepage": "./",
+  "browserslist": [
+    "last 4 versions"
+  ],
+  "main": "main.js",
+  "scripts": {
+    "prod": "cross-env NODE_ENV=production webpack --mode production --config webpack.build.config.js && electron --noDevServer .",
+    "start": "cross-env NODE_ENV=production webpack-dev-server --hot --host 0.0.0.0 --config=./webpack.dev.config.js --mode development",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.build.config.js --mode production",
+    "package": "npm run build",
+    "postpackage": "electron-packager ./ --out=./release-builds"
+  },
+  "dependencies": {
+    "bootstrap": "*",
+    "moment": "*",
+    "mongoose": "*",
+    "react": "*",
+    "react-bootstrap": "*",
+    "react-dom": "*",
+    "react-moment": "*"
+  },
+  "devDependencies": {
+    "@babel/core": "*",
+    "@babel/preset-env": "*",
+    "@babel/preset-react": "*",
+    "babel-loader": "*",
+    "babili-webpack-plugin": "*",
+    "cross-env": "*",
+    "css-loader": "*",
+    "electron": "*",
+    "electron-builder": "*",
+    "electron-devtools-installer": "*",
+    "electron-packager": "*",
+    "file-loader": "*",
+    "html-webpack-plugin": "*",
+    "mini-css-extract-plugin": "*",
+    "style-loader": "*",
+    "webpack": "*",
+    "webpack-cli": "*",
+    "webpack-dev-server": "*"
+  }
+}
