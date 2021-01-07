@@ -5,7 +5,7 @@ A simple bug-loggger application for a team where users can add bug logs and del
 #### Clone this repo
 
 ```
-git clone https://github.com/bradtraversy/simple-electron-react.git
+git clone https://github.com/wolfian/buglogger.git buglogger
 ```
 
 #### Install dependencies
